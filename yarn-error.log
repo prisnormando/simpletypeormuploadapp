@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /opt/yarn-v1.22.4/bin/yarn.js add tyorm
+  /usr/local/bin/node /opt/yarn-v1.22.4/bin/yarn.js add path
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -14,17 +14,16 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/tyorm: Not found
-      at Request.params.callback [as _callback] (/opt/yarn-v1.22.4/lib/cli.js:66987:18)
-      at Request.self.callback (/opt/yarn-v1.22.4/lib/cli.js:140748:22)
-      at Request.emit (events.js:315:20)
-      at Request.<anonymous> (/opt/yarn-v1.22.4/lib/cli.js:141720:10)
-      at Request.emit (events.js:315:20)
-      at IncomingMessage.<anonymous> (/opt/yarn-v1.22.4/lib/cli.js:141642:12)
+  Error: https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (/opt/yarn-v1.22.4/lib/cli.js:141375:19)
       at Object.onceWrapper (events.js:421:28)
-      at IncomingMessage.emit (events.js:327:22)
-      at endReadableNT (_stream_readable.js:1220:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:709:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:482:8)
+      at listOnTimeout (internal/timers.js:549:17)
+      at processTimers (internal/timers.js:492:7)
 
 npm manifest: 
   {

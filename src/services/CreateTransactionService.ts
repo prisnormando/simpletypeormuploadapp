@@ -4,7 +4,7 @@ import transactionsRepository from '../repositories/transactionsRepository';
 import Transaction from '../models/Transaction';
 
 
-interface {
+interface Request{
   title: string;
   type: 'income' | 'outcome';
   value: number;
@@ -12,7 +12,7 @@ interface {
 }
 
 class CreateTransactionService {
-  public async execute({title, value, type, category,}: Request): Promise<Transaction> {
+  public async execute({title, value, type, category}: Request): Promise<Transaction> {
     const transactionsRepository = getCustomRepository(TransactionsRepository);
     const {total} = await transactionsRepository.getBalance();
     if (type === "outcome" && total < value) {
