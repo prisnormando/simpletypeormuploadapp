@@ -18,12 +18,12 @@ class TransactionsRepository extends Repository<Transaction> {
           accumulator.income += Number(transaction.value);
           break;
         case "outcome":
-          accumulator.income += Number(transaction.value);
+          accumulator.outcome += Number(transaction.value);
           break;
         default:
           break;
-      return accumulator;
       }
+      return accumulator;
     }, {
       income: 0,
       outcome: 0,
